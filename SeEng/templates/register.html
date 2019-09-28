@@ -1,0 +1,73 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheet.css') }}">
+	<title>Search_Optimisation</title>
+<body>
+<h2>Search Engine Optimization <br>Using Time Based Ranking</h2>
+<div class="Menu">MENU</div>
+<a href="{{ url_for('admin') }}"><div class="Dark">Register</div></a>
+<a href="{{ url_for('home') }}"><div class="Norm">Home</div></a>
+<a href="{{ url_for('user') }}"><div class="Norm"> Admin</div></a>
+<form action="{{ url_for('reg') }}" method=post>
+	<div class="URL">
+		<table>
+			<tr>
+			<td> <br>Name: </td>
+			<td> <br><input type="text" name="nm"/> </td>
+			</tr>
+			<tr>
+			<td> <br>Username: </td>
+			<td> <br><input type = "text" name = "uname" />
+			</tr>
+			<tr>
+			<td> <br>Email ID </td>
+			<td> <br><input type="text" name="Eid"/> </td>
+			</tr>
+			<tr>
+			<td> <br>Password: </td>
+			<td> <br><input type = "password" name = "pswd" /> </td>
+			</tr>
+			<tr>
+			<td> <br>Confirm Password: </td>
+			<td> <br><input type="password" name="cpswd"/> </td>
+			</tr>
+			<tr>
+			<td> <br>DOB: </td>
+			<td> <br><input type = "date" name = "dob" /> </td>
+			</tr>
+			<tr>
+			<td> <br>Address: </td>
+			<td> <br><textarea name="ad" rows="2" cols="20"></textarea> </td>
+			</tr>
+			<tr>
+			<td> <br>Mobile No: </td>
+			<td> <br><input type = "text" name = "no" /> </td>
+			</tr>
+			<tr>
+			<td> <br>Gender: </td>
+			<td> <br>	<select name="gender">
+							<option value="select">--SELECT--</option>
+							<option value="male">male</option>
+							<option value="female">female</option>
+						</select>
+			</td>
+			</tr> 
+			<tr>
+			<td> <br><input type = "submit" value = "Submit"/> </td>
+			<td> <br><input type = "reset" value = "Clear"/>
+			</tr>
+		</table>
+	</div>
+	<div class="Error">
+		{% with messages = get_flashed_messages(with_categories=true) %}
+		{% if messages %}
+		<ul class=flashes>
+    	{% for category, message in messages %}
+    	<li class="{{ category }}">{{ message }}</li>
+    	{% endfor %}
+    	</ul>
+	    {% endif %}
+		{% endwith %}
+	</div>
+</form>
+</body></head>

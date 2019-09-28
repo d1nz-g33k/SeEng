@@ -1,0 +1,32 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheet.css') }}">
+	<title>Search_Optimisation</title>
+<body>
+<h2>Search Engine Optimization <br>Using Time Based Ranking</h2>
+<div class="Menu">MENU</div>
+<div class="Dark">Home</div>
+<a href="{{ url_for('admin') }}"><div class="Norm">Admin</div></a>
+<a href="{{ url_for('user') }}"><div class="Norm">User</div></a>
+<blockquote>
+<form action="{{ url_for('home') }}" method=post>
+	<div class="Login">
+		Username: <input type = "text" name = "nm" />
+		<br><br>Password: <input type="password" name="pwd"/><p>
+		<input type = "submit" value = "Login"/>
+		<br><br><a href="{{ url_for('reg') }}">Not a member? Register</a>
+	</div>
+	<div class="Error">
+		{% with messages = get_flashed_messages(with_categories=true) %}
+		{% if messages %}
+		<ul class=flashes>
+    	{% for category, message in messages %}
+    	<li class="{{ category }}">{{ message }}</li>
+    	{% endfor %}
+    	</ul>
+	    {% endif %}
+		{% endwith %}
+	</div>
+</form>
+</blockquote>
+</body></head>

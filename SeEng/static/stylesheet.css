@@ -1,0 +1,90 @@
+body
+{
+	background-color: blue;
+
+}
+h2
+{
+	margin-top: 100px;
+	margin-right: 500px;
+	margin-left: 150px;
+	padding-left: 15px;
+	padding-top: 15px;
+	color: white;
+	background-color: black;
+}
+
+.Menu
+{
+	color: white;
+	font-weight: bolder;
+	font-size: 20px;
+	margin-left: 205px;
+	margin-bottom: 25px;
+}
+
+.Dark
+{
+	color: white;
+	font-weight: lighter;
+	background-color: #1C193C;
+	margin-right: 1085px;
+	text-align: center;
+	font-size: 15px;
+	margin-left: 205px;
+	margin-bottom: 20px;
+}
+
+.Norm
+{
+	color: white;
+	font-weight: lighter;
+	font-size: 15px;
+	margin-left: 205px;
+	margin-bottom: 20px;
+	margin-right: 1085px;
+	text-align: center;
+}
+
+.Login
+{
+	background-color: white;
+	padding-left: 80px;
+	margin-left: 350px;
+	margin-right: 400px;
+	margin-top: -130px;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+.Error
+{
+	background-color: black;
+	color: white;
+	margin-left: 700px;
+	margin-top: -106px;
+	margin-right: 400px;
+}
+
+.log
+{
+	background-color: black;
+	color: white;
+	margin-left: 500px;
+	margin-top: -106px;
+	margin-right: 600px;
+	font-size: 20px;
+}
+
+.URL
+{
+	background-color: white;
+	color: black;
+	padding-left: 80px;
+	margin-left: 390px;
+	margin-right: 440px;
+	margin-top: -169px;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	margin-bottom: 50px;
+}

@@ -1,0 +1,64 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+window.onunload=ty();
+function ty(){
+alert("hi")
+$.getJSON('/_add_numbers', { });
+}
+</script>
+                
+<HTML>
+	<HEAD>
+		<TITLE> Registration Form </Title>
+		<Body>
+			<center><H1>Registration Form
+			<table>
+				<tr>
+					<td><H4>Name</td> 
+					<td><input type="textbox" name="t1"></td> 
+				</tr>
+				<tr>
+					<td><H4>Password </td>
+					<td><input type="textbox" name="t2" ></td>
+				</tr>
+				<tr>
+					<td><H4>Email </td>
+					<td><input type="textbox" name="t3"></td>
+				</tr>
+				<tr>
+					<td><H4>Contact </td>
+					<td><input type="textbox" name="t4"><br></td>
+				</tr>
+				<tr>
+					<td><H4>Languages Known</td>
+					<td colspan="3"><input type="checkbox" name="c1"> Telugu <input type="checkbox" name="c2"> Hindi <input type="checkbox" name="c3"> English </td>
+				</tr>
+				<tr>
+					<td><H4>Gender </td>
+					<td><input type="Radio" name="r1" value="Male"> Male <input type="Radio" name="r1" value="Female"> Female</td>
+				</tr>
+				<tr>
+					<td><H4>City</td> 
+					<td><select>
+						<option>--Select City--</option>
+						<option>Hyderabad</option>
+						<option>Vijayawada</option>
+						<option>Chennai</option></select></td>
+				</tr>
+				<tr>
+					<td><H4>Address </td>
+					<td><textarea></textarea></td>
+				</tr>
+				<tr>
+					<p><td colspan="2"><input type="checkbox" name="c"> I hereby accept the <a href="file:///C:/Users/Dinesh/Desktop/Img.html">terms and conditions</a></td></p>
+				</tr>
+				<tr><br>
+					<td colspan="3"><center><a href="file:///C:/Users/Dinesh/Desktop/Reg.html"><button>Register</button></a>
+						<a href="file:///C:/Users/Dinesh/Desktop/Reg_form.html"><button>Reset</button></a></center></td>
+				</tr>
+			</table></center>
+			
+		</Body>
+	</Head>
+</Html>

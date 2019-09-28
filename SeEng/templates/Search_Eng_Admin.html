@@ -1,0 +1,62 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheet.css') }}">
+	<title>Search_Optimisation</title>
+<body>
+<h2>Search Engine Optimization <br>Using Time Based Ranking</h2>
+<div class="Menu">MENU</div>
+<a href="{{ url_for('admin') }}"><div class="Dark">Upload</div></a>
+<div class="Norm">Chart</div>
+<a href="{{ url_for('user') }}"><div class="Norm" style="margin-left: 180px; margin-right:1050px;"> View Users History</div></a>
+<a href="{{ url_for('logout') }}"><div class="Norm">Logout</div></a>
+<form action="{{ url_for('admin') }}" enctype=multipart/form-data method=post name="post">
+	
+	<div class="URL">
+		<table>
+			<tr>
+			<td> <label for = "url"> Enter URL: </label> </td>
+			<td> <input name = "url" type = "text" value = "" /> </td>
+			</tr>
+			<tr>
+			<td> <br><label for= "fname">FileName:</label> </td>
+			<td> <br><input type="text" name="fn"/> </td>
+			</tr>
+			<tr>
+			<td> <br><label for = "fkey">File Key:</label> </td>
+			<td> <br><input id="K" type = "text" name = "K" />
+			</tr>
+			<tr>
+			<td> <br><label for= "skey">File Subkey:</label> </td>
+			<td> <br><input id='subK' type="text" name="subK"/> </td>
+			</tr>
+			<tr>
+			<td> <br><label for= "k2">Secondary Key: </label></td>
+			<td> <br><input id='k2' type = "text" name = "k2" /> </td>
+			</tr>
+			<tr>
+			<td> <br>Upload File: </td>
+			<td> <br><input id='file' type='file' name='file[]'/> </td>
+			</tr>
+			<tr>
+			<td> <br>Description: </td>
+			<td> <br><textarea name="msg" rows="3" cols="20"></textarea>
+			</tr>
+			<tr>
+			<td> <br><input type = "submit" value = "Submit"/> </td>
+			<td> <br><input type = "reset" value = "Clear"/>
+			</tr>
+		</table>
+	</div>
+	<div class="Error">
+		{% with messages = get_flashed_messages(with_categories=true) %}
+		{% if messages %}
+		<ul class=flashes>
+    	{% for category, message in messages %}
+    	<li class="{{ category }}">{{ message }}</li>
+    	{% endfor %}
+    	</ul>
+	    {% endif %}
+		{% endwith %}
+	</div>
+</form>
+</body></head>

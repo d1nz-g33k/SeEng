@@ -1,0 +1,74 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheet.css') }}">
+	<title>Search_Optimisation</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      var messages = {{ messages | safe }};
+      for (var i=0; i<messages.length; i++) {
+        alert(messages[i]);
+      }
+    </script>
+  {% endif %}
+{% endwith %}
+
+
+<script type="text/javascript">
+var changes = true;        
+window.onbeforeunload=function() {
+	if (changes)
+	{
+        var message = "Are you sure you want to navigate away from this page?\n\nPress OK to continue or Cancel to stay on the current page.";
+        if (confirm(message)){ 
+        	var t='{{f}}'
+          $.getJSON('/_add_numbers')
+          return true;
+        }
+        else{ 
+          return false;
+        }
+    }
+}
+</script>
+
+
+<body>
+
+
+
+    <input'changes=true;'</input> 
+
+
+<h2>Search Engine Optimization <br>Using Time Based Ranking</h2>
+<div class="Menu">MENU</div>
+<a href="{{ url_for('user') }}"><div class="Dark">Search</div></a>
+<a href="{{ url_for('admin') }}"><div class="Norm">View Request</div></a>
+<a href="{{ url_for('logout') }}"><div class="Norm">Logout</div></a>
+<form action="{{ url_for('user') }}" method=post>
+	<div class="Login">
+		Welcome 
+		<br>Search: 
+		<br><br><br>Web Search &nbsp;&nbsp;&nbsp;&nbsp; Images &nbsp; News &nbsp; Sports &nbsp;
+		<br><br><br><br>Search Here &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="search">
+		<br><input type = "submit" value = "Search"/>
+		<br><br>
+		{{result}}
+	</div>
+
+	<div class="Error">
+		{% with messages = get_flashed_messages(with_categories=true) %}
+		{% if messages %}
+		<ul class=flashes>
+    	{% for category, message in messages %}
+    	<li class="{{ category }}">{{ message }}</li>
+    	{% endfor %}
+    	</ul>
+	    {% endif %}
+		{% endwith %}
+	</div>
+	
+</form>
+</body></head>

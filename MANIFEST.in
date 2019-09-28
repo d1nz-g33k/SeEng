@@ -1,0 +1,3 @@
+graft SeEng/templates
+graft SeEng/static
+include SeEng/schema.sql
